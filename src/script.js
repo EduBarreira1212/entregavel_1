@@ -1,7 +1,40 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//ESCREVA SEU CÓDIGO AQUI!!
+function Calculadora(numero1, numero2, operador) {
+  let num1 = parseInt(numero1);
+  let num2 = parseInt(numero2);
+  let result;
+  switch (operador){
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result =  num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+    case "e":
+      let potencia = 0;
+      for (let i = 0; i < num2; i++) {
+        potencia += (num1*num1);
+      }
+      result = potencia;
+      break;
+    default:
+      break;
+  }
+
+  if(result === undefined || result > 1000000){
+    result = "ERRO";
+  }
+
+  return result;
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
