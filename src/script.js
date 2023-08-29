@@ -19,9 +19,9 @@ function Calculadora(numero1, numero2, operador) {
       result = num1 / num2;
       break;
     case "e":
-      let potencia = 0;
+      let potencia = 1;
       for (let i = 0; i < num2; i++) {
-        potencia += (num1*num1);
+        potencia *= num1;
       }
       result = potencia;
       break;
